@@ -59,8 +59,8 @@ pipeline {
                 attachLog: true 
                 )
             }
-          }
         }
+    }
         stage('Deploy to staging') {
             steps {
                 echo "Deploying application to staging server"
