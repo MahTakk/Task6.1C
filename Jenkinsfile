@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps { 
                 echo "Using automation tool to build the code"
-                echo "Maval is the automation tool used."
+                echo "Blue Ocean is the automation tool used."
             }
          }
         stage('The unit and integaration tests') {
@@ -34,13 +34,13 @@ pipeline {
         stage('Code Analysis') {
             steps {
                 echo "Ensuring industry standrads are met by code analysis"
-                echo "SonarQube is the tool used"
+                echo "Checkmarx is the tool used"
             }
         }
         stage ('Security Scan') {
             steps {
                 echo "Identifying any vulnerabilities by performing a security scan"
-                echo "OWSAP ZAP is the tool used"
+                echo "Burp Suite is the tool used"
             }
             post {
             success {
@@ -64,19 +64,19 @@ pipeline {
         stage('Deploy to staging') {
             steps {
                 echo "Deploying application to staging server"
-                echo "Docker with AWS EC2 is the tool used" 
+                echo "ECS is the tool used" 
             }
         }
         stage ('Integration tests on staging') {
             steps {
                 echo "Using the statging enviroment to run the integration tests"
-                echo "Postman is the tool I used"
+                echo "Insomnia Core is the tool I used"
             }
         }
         stage('Deploy to production') {
             steps {
                 echo "Deploying the application into the production server"
-                echo "Kubernetes with AWS EC2 is the tool used" 
+                echo "Kops is the tool used" 
             }
         }   
     }
