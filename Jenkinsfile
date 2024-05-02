@@ -7,7 +7,7 @@ pipeline {
                 echo "Blue Ocean is the automation tool used."
             }
          }
-        stage('The unit and integaration tests') {
+        stage('The unit and integration tests') {
             steps {
                 echo "Running unit tests and integration tests to ensure code functionality"
                 echo "JUnit is used for unit tests whil Selenium is used for integration tests"
@@ -16,16 +16,16 @@ pipeline {
                 success {
                     emailext(
                         to: "maheengulk@gmail.com",
-                        subject: "sucess of security scan",
-                        body: "The security scan is a success, congratulations",
+                        subject: "sucess of integration",
+                        body: "The integration is a success, congratulations",
                         attachLog: true
                     )
                 }
                 failure {
                     emailext(
                         to: "maheengulk@gmail.com",
-                        subject: "FAILURE of security scan",
-                        body: "The security scan failed, try again or make necessary changes",
+                        subject: "FAILURE integration",
+                        body: "The integration failed, try again or make necessary changes",
                         attachLog: true 
                     )
                 }
