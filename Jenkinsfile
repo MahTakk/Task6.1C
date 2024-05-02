@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps { 
                 echo "Using automation tool to build the code"
-                echo "Maval is the automation tool used"
+                echo "Maval is the automation tool used."
             }
          }
         stage('The unit and integaration tests') {
