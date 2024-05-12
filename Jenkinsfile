@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps { 
-                echo "Using automation tool to build the code"
+                echo "Using automation tool to build the new code"
                 echo "Blue Ocean is the automation tool used."
             }
          }
